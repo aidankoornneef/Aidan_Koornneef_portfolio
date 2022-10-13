@@ -1,0 +1,42 @@
+{% extends './base.html' %}
+
+{% block content %}
+{% with projectpage='active' %}
+    {{ block.super }}
+{% endwith %}
+{% endblock %}
+
+{% block two %}
+    <h1>Engineering Projects</h1>
+{% endblock two %}
+
+{% block three %}
+<div class="container-fluid bg-3 text-center">
+    <h3>Harvesting the Sun and Wind Design Competition</h3>
+    <div class="row">
+        <div class="col-sm-4">
+          {% load static %} <img src="{% static "portfolio/media/car_side.jpg" %}" alt="car" class="img-fluid rounded project" />
+        </div>
+        <div class="col-sm-4">
+          {% load static %} <img src="{% static "portfolio/media/controller.jpg" %}" alt="controller" class="img-fluid rounded controller" />
+        </div>
+        <div class="col-sm-4">
+          {% load static %} <img src="{% static "portfolio/media/cad_car.png" %}" alt="car" alt="cadcar"class="img-fluid rounded project" />
+        </div>
+        <div class="mx-auto" style="width: 1000px;">
+            <p>This project was designed by the American Society of Mechanical Engineers (ASME), and challenged teams to design and build a vehicle with the ability to carry a minimum of 0.5 kg of payload through a defined course while being remotely controlled. This vehicle must be powered entirely by a single AAA battery which can only be recharged through either solar or wind power sources. The Team’s solution for this design problem was a two piece vehicle which consisted of a drive car or “tractor” to pull a trailer which could accommodate 1 to 10, 0.5 kg weights. This vehicle is controlled wirelessly via a bluetooth transmitter and two joysticks on a remote control. This vehicle design took inspiration from the heavy movers of the real world, tractor trailers. This design allowed a high level of maneuverability as well as a high weight carrying capacity. Electrical issues were encountered with the overall current draw of the circuit when pulling a load of over 3 weights. This same current draw issue caused issues with the bluetooth connectivity as well which would create control issues with the cars at high speeds.
+        </p>
+        </div>
+    </div>
+    <h3>ABB Robot Arm</h3>
+  {% load static %} <img src="{% static "portfolio/media/abb.jpg" %}" alt="arm" class="img-fluid rounded project" style="float:left"/>
+  <p>
+    	In this project I Used RAPID with a Cognex camera to capture location data for objects on a conveyor belt. The conveyor belt had varied speed with randomly oriented boxes on it. The cognex camera allowed the orientation and speed of the box to be calculated. Once the information was collected the robot would reorient and stack the boxes as they came down the conveyor belt. 
+  </p>
+  
+</div>
+
+  
+
+{% endblock %}
+

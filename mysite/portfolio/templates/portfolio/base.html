@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        {% load static %}<link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+        {% load static %}<link href="{% static 'portfolio/css/bootstrap.min.css' %}" rel="stylesheet">  
+        {% load static %}<script src="{% static 'portfolio/js/bootstrap.min.js' %}"></script>  
+        <title>Aidan Koornneef</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        {% block content %}
+        <div class = "topnav">
+            <a href="{% url 'homeview' %}" class={{homepage}}>Home</a>
+            <a href="{% url 'workview' %}" class={{workpage}}>Work</a>
+            <a href="{% url 'projectview' %}" class={{projectpage}}>Projects</a>
+        </div>
+        {% endblock %}
+
+        <div class="container-fluid bg-1 text-center">
+        {% block two %}
+        {% endblock %}
+        </div>
+   
+
+        
+        {% block three %}
+        {% endblock  %}
+    
+
+        <div class="container-fluid bg-3">
+        {% block four %}
+        
+        {% endblock  %}
+        </div>
+        
+        <footer class="container-fluid bg-4 text-center">
+            <p>THIS IS THE FOOTER <a href="https://www.linkedin.com/in/aidan-koornneef/">www.AidansLinkedin.com</a></p>
+        </footer>
+    </body>
+</html>

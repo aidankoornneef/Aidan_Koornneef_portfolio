@@ -1,0 +1,35 @@
+{% extends './base.html' %}
+
+{% block content %}
+{% with workpage='active' %}
+    {{ block.super }}
+{% endwith %}
+{% endblock %}
+
+{% block two %}
+    <h1>Work Experience</h1>
+{% endblock two %}
+
+
+
+{% block four %}
+    {% load static %} <img src="{% static "portfolio/media/turbocam.png" %}" class="float-right"  style="height:50px"/>
+      <h5>Mechanical Engineering Intern</h5>
+        <ul>
+            <li>Designing fixtures for mills and other machines</li>
+            <li>Creating detailed drawings in SolidWorks for part balancing</li>
+            <li>Developed work instructions for balancing turbofans</li>
+        </ul>
+
+
+    {% load static %} <img src="{% static "portfolio/media/pps_white.png" %}" alt="logo" class="align-self-start mr-3" alt="Generic placeholder image" style="height:50px;"/>
+        <h5>Engineering Intern</h5>
+        <ul>
+            <li>Designing piping and instrumentation diagrams for the natural gas company</li>
+            <li>Working with 3D scans to create existing and future site plans</li>
+            <li>Creating more efficient work flows by programming AutoCAD macros</li>
+        </ul>
+    
+
+
+{% endblock %}

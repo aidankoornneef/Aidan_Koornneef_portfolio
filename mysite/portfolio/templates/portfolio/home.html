@@ -1,0 +1,46 @@
+
+{% extends './base.html' %}
+
+{% block content %}
+{% with homepage='active' %}
+    {{ block.super }}
+    
+{% endwith %}
+{% endblock %}
+
+{% block two %}
+    <h3>Aidan Koornneef</h3>
+    {% load static %} <img src="{% static "portfolio/media/profile_pic.jpg" %}" alt="Avatar" class="avatar" />
+    <h3>I'm a problem solver.</h3>
+    <div class="mx-auto" style="width: 800px;">
+        <p>I believe almost any problem can be solved given enough time and effort. Usually the best way to solve a problem is through collaboration whether that be through coworkers or google. Have a look around my website here to see the many different problems I have or am currently solving!
+        </p>
+    </div>
+{% endblock  %}
+
+  
+{% block three %}
+<div class="container-fluid bg-3 text-center">
+    <h3>The Fun Stuff</h3>
+    
+        <div class="row">
+            <div class="col-sm-4">
+                <p>My CNC</p>
+                {% load static %} <img src="{% static "portfolio/media/cnc.png" %}" class="img-fluid" style="height: 200px"/>
+                <p> This is a onefinity hobby cnc. One of my favorite Hobbies is using this cnc to make signs and all sorts of fun things.</p>
+            </div>
+            <div class="col-sm-4">
+                <p>This Website</p>
+                {% load static %} <img src="{% static "portfolio/media/thiswebsite.png" %}" class="img-fluid" style="height: 200px"/>
+                <p>This website is my first time implementing django, html, and css with bootstrap all into one project. It has a been a lot of fun seeing it come together and gaining a deeper understanding of how the internet works. Making a website look good is hard work.</p>
+            </div>
+            <div class="col-sm-4">
+                <p>The Cafe</p>
+                {% load static %} <img src="{% static "portfolio/media/ssc.png" %}" class="img-fluid" style="height: 200px"/>
+                <p>My wife and I started school street cafe back in 2020. This is one of my favorite projects that I have worked on. I created the menu and many other furniture pieces in the cafe which makes the place feel like home.</p>
+            </div>
+        </div>
+
+</div>
+{% endblock %}
+
